@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-09-06T18:30:48.416Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="GvdZVUdQA5fYvn-AyUjE" version="20.2.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-06T23:58:01.747Z" agent="5.0 (Linux; Android 12; M2101K6G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36" etag="lLuKUttlmtG_Df5q0f6C" version="20.2.8" type="github">
   <diagram id="vQZW4OZkiL1XJwjymWI4" name="Página-1">
-    <mxGraphModel dx="1384" dy="785" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="276" dy="575" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -37,7 +37,7 @@
         <mxCell id="dtLGfvdLKiji24awXUGy-22" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="dtLGfvdLKiji24awXUGy-20" vertex="1">
           <mxGeometry y="140" width="185" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="dtLGfvdLKiji24awXUGy-23" value="+ GetBySerialNumber(int serial)&#xa;+ GetByName(String name)&#xa;+ GetByLocale(String local)&#xa;+ GetByResponsible(String resp)&#xa;+ Add(Equipamentos equi)&#xa;+ Update(Equipamentos equi)&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="dtLGfvdLKiji24awXUGy-20" vertex="1">
+        <mxCell id="dtLGfvdLKiji24awXUGy-23" value="+ GetBySerialNumber(int serial)&#xa;+ GetByNome(String name)&#xa;+ GetByLocal(String local)&#xa;+ GetByResponsavel(String resp)&#xa;+ Add(Equipamentos equi)&#xa;+ Update(Equipamentos equi)&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="dtLGfvdLKiji24awXUGy-20" vertex="1">
           <mxGeometry y="148" width="185" height="102" as="geometry" />
         </mxCell>
         <mxCell id="dtLGfvdLKiji24awXUGy-24" value="Responsavel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
@@ -88,16 +88,16 @@
         <mxCell id="xnF2MUeoURb5oZggPPuW-7" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;DIAGRAMA DE CLASSES&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=1;opacity=90;" parent="1" vertex="1">
           <mxGeometry x="45" y="395" width="545" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="iCeZY42l8MoWFozbNO_Y-6" value="Datatime" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="iCeZY42l8MoWFozbNO_Y-6" value="Datatime" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="620" y="284" width="185" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="iCeZY42l8MoWFozbNO_Y-7" value="- Dia: int&#xa;- Mes: int&#xa;- Ano: int&#xa;- Hora: int&#xa;- Minuto: int&#xa;- Segundo: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCeZY42l8MoWFozbNO_Y-6">
+        <mxCell id="iCeZY42l8MoWFozbNO_Y-7" value="- Dia: int&#xa;- Mes: int&#xa;- Ano: int&#xa;- Hora: int&#xa;- Minuto: int&#xa;- Segundo: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCeZY42l8MoWFozbNO_Y-6" vertex="1">
           <mxGeometry y="26" width="185" height="94" as="geometry" />
         </mxCell>
-        <mxCell id="iCeZY42l8MoWFozbNO_Y-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="iCeZY42l8MoWFozbNO_Y-6">
+        <mxCell id="iCeZY42l8MoWFozbNO_Y-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="iCeZY42l8MoWFozbNO_Y-6" vertex="1">
           <mxGeometry y="120" width="185" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="iCeZY42l8MoWFozbNO_Y-9" value="+ Adicionar(Datatime datatime)&#xa;+ Deletar(Datatime datatime)&#xa;+ Alterar(Datatime datatime)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="iCeZY42l8MoWFozbNO_Y-6">
+        <mxCell id="iCeZY42l8MoWFozbNO_Y-9" value="+ Adicionar(Datatime datatime)&#xa;+ Deletar(Datatime datatime)&#xa;+ Alterar(Datatime datatime)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="iCeZY42l8MoWFozbNO_Y-6" vertex="1">
           <mxGeometry y="128" width="185" height="52" as="geometry" />
         </mxCell>
       </root>
