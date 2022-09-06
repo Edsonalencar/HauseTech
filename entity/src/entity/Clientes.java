@@ -1,5 +1,5 @@
 package entity;
-public class Clientes{
+public class Clientes extends Pessoas{
     private int cpf;
 
     public void Compra(Vendas venda){}
