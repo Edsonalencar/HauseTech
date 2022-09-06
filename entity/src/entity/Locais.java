@@ -8,7 +8,7 @@ public class Locais{
         this.localDeArmazenamento = local;
     }
     public void Alterar(Locais local){
-        if(local == !null){
+        if(local != null){
             this.localDeArmazenamento = local;
         }
     }
