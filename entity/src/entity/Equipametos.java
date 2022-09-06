@@ -1,16 +1,17 @@
 package entity;
 
 public class Equipametos {
-private String nome, serialNumber, local, responsavel, ativo;
+private String nome, local, responsavel;
 private double preco;
-private int qtd; 
+private int qtd, serialNumber;
+private boolean ativo;	
 
 
 
 public String getNome(){
 	return nome;
 }
-public String getSerialNumber(){
+public int getSerialNumber(){
 	return serialNumber;
 }
 public String getLocal(){
@@ -19,7 +20,7 @@ public String getLocal(){
 public String getResponsavel(){
 	return responsavel;
 }
-public String getAtivo(){
+public boolean getAtivo(){
 	return ativo;
 }
 public double getpreco(){
@@ -33,7 +34,7 @@ public int getQtd(){
 public void setNome(String nome){
 	 this.nome = nome;
 }
-public void setSerialNumber(String serialNumber){
+public void setSerialNumber(int serialNumber){
 	this.serialNumber = serialNumber ;
 }
 public void setLocal(String local){
@@ -42,7 +43,7 @@ public void setLocal(String local){
 public void setResponsavel(String responsavel){
 	this.responsavel = responsavel;
 }
-public void setAtivo(String ativo){
+public void setAtivo(boolean ativo){
 	this.ativo = ativo;
 }
 public void setPreco(double preco){
