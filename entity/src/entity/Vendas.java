@@ -12,7 +12,7 @@ class Vendas{
 	// --- Setters ---
 
 	public void setCliente(String cliente){
-		if (cliente != null) {
+		if (cliente != null && cliente != "") {
 	      this.cliente = cliente;
 	    } else{
 	      System.out.println("Cliente vazio.");
@@ -20,7 +20,7 @@ class Vendas{
 	}
 
 	public void setResponsavel(String responsavel){
-		if (responsavel != null) {
+		if (responsavel != null && responsavel != "") {
 	      this.responsavel = responsavel;
 	    } else{
 	      System.out.println("Responsável vazio.");

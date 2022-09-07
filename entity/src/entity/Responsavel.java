@@ -1,10 +1,11 @@
 package entity;
 
-class Responsavel extends Pessoas {
+public class Responsavel extends Pessoas {
   private int tel;
 
+  // --- Setters ---
   public void setName(String name) {
-    if (name != null) {
+    if (name != null && name != "") {
       this.name = name;
     } else {
       throw new IllegalArgumentException("Nome invalido");
@@ -12,7 +13,7 @@ class Responsavel extends Pessoas {
   }
 
   public void setAdress(String adress) {
-    if (adress != null) {
+    if (adress != null && adress != "") {
       this.adress = adress;
     } else {
       throw new IllegalArgumentException("Endereço invalido");
@@ -20,13 +21,14 @@ class Responsavel extends Pessoas {
   }
 
   public void setTel(int tel) {
-    if (tel != 0) {
+    if (tel > 0) {
       this.tel = tel;
     } else {
       throw new IllegalArgumentException("Telefone invalido");
     }
   }
 
+  // --- Getters ---
   public String getNome() {
     return this.name;
   }
@@ -39,6 +41,7 @@ class Responsavel extends Pessoas {
     return this.tel;
   }
 
+  // --- Construtores ---
   public Responsavel() {
   }
 
@@ -49,13 +52,13 @@ class Responsavel extends Pessoas {
 
   }
 
+  // --- Metodos ---
   public void GerarRelatorio() {
     // Acessa o registro de vendas e gera o relatorio de vendas por periodo
   }
 
-  public void Vender() {
-    // Recebe a classe vendas, chama seu metodo cadastro e registra uma venda ao
-    // sistema
+  public void Vender(Vendas venda) {
+    venda.Cadastrar(venda);
   }
 
   public void Cadastrar(Responsavel resp) {

@@ -1,31 +1,44 @@
 
 package entity;
-public class Locais{
+
+public class Locais {
     private String localDeArmazenamento;
     private String compartimento;
+
     // Metodos
-    public void Adicionar(Locais local){
-        this.localDeArmazenamento = local;
+    public void Adicionar(Locais local) {
+        setLocalDeArmazenamento(local.localDeArmazenamento);
+        setCompartimento(local.compartimento);
     }
-    public void Alterar(Locais local){
-        if(local != null){
-            this.localDeArmazenamento = local;
-        }
+
+    public void Alterar(Locais local) {
+        setLocalDeArmazenamento(local.localDeArmazenamento);
+        setCompartimento(local.compartimento);
     }
 
     // getters
-    public String getLocalDeArmazenamento(){
-        return localDeArmazenamento;
+    public String getLocalDeArmazenamento() {
+        return this.localDeArmazenamento;
     }
-    public String getCompartimento(){
-        return compartimento;
+
+    public String getCompartimento() {
+        return this.compartimento;
     }
 
     // setters
-    public void setLocalDeArmazenamento(String localDeArmazenamento){
-        this.localDeArmazenamento = localDeArmazenamento;
+    public void setLocalDeArmazenamento(String localDeArmazenamento) {
+        if (localDeArmazenamento != null && localDeArmazenamento != "") {
+            this.localDeArmazenamento = localDeArmazenamento;
+        } else {
+            throw new IllegalArgumentException("localDeArmazenamento é invalido");
+        }
     }
-    public void setCompartimento(String compartimento){
-        this.compartimento = compartimento;
+
+    public void setCompartimento(String compartimento) {
+        if (compartimento != null && compartimento != "") {
+            this.compartimento = compartimento;
+        } else {
+            throw new IllegalArgumentException("compartimento é invalido");
+        }
     }
 }
