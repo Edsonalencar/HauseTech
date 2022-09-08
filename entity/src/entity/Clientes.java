@@ -18,11 +18,11 @@ public class Clientes extends Pessoas{
         }
       }
     
-      public void setCef(String cpf) {
+      public void setCpf(String cpf) {
         if (cpf != null && cpf != "") {
           this.cpf = cpf;
         } else {
-          throw new IllegalArgumentException("Telefone invalido");
+          throw new IllegalArgumentException("Cpf invalido");
         }
       }
 
