@@ -1,4 +1,4 @@
-package hausetech.entity.src.model.dao; // nao sei se isso ta certo
+package model.DAO
 
 import java.sql.Connection;
 import java.sql.DriverManager;
