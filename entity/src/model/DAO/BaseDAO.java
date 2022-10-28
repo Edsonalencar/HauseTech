@@ -1,24 +1,24 @@
-package model.DAO
+package model.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class BaseDao<entity> implements BaseInterDAO<entity>{
-	private Connection con;
+public class BaseDAO<entity> implements BaseInterDAO<entity>{
+	private Connection com;
 	
 	synchronized public Connection getConnection() {
-		if(con == null) {
+		if(com == null) {
 			try {
-			    con = DriverManager.getConnection("jdbc:mysql://localhost/hausetech","user","senha"); // INSERIR DADOS DO DB
+			    com = DriverManager.getConnection("jdbc:mysql://localhost:3306/hausetech","root","oioi"); // INSERIR DADOS DO DB
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			return con;
+			return com;	
 		}
-		else return con;
+		else return com;
 	}
 
 	@Override

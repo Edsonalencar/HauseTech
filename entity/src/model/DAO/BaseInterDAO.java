@@ -1,7 +1,9 @@
-package hausetech.entity.src.model.dao;
+package model.DAO;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+
+import model.entities.Cliente;
 
 public interface BaseInterDAO<entity> {
 	public Connection getConnection();
