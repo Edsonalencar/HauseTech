@@ -1,8 +1,8 @@
-package entity;
-public class Clientes extends Pessoas{
+package model.entities;
+public class Cliente extends Pessoas{
     private String cpf;
    
-    public void setName(String name) {
+    public void setNome(String name) {
         if (name != null && name != "") {
           this.name = name;
         } else {
@@ -10,7 +10,7 @@ public class Clientes extends Pessoas{
         }
       }
     
-      public void setAdress(String adress) {
+      public void setEndereco(String adress) {
         if (adress != null && adress != "") {
           this.adress = adress;
         } else {
@@ -30,7 +30,7 @@ public class Clientes extends Pessoas{
         return this.name;
       }
     
-      public String getAdress() {
+      public String getEndereco() {
         return this.adress;
       }
     
