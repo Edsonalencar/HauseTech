@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="api.controllers.CadastroClienteController">
+   <children>
+      <TextField fx:id="nome" layoutX="300.0" layoutY="83.0" />
+      <TextField fx:id="cpf" layoutX="300.0" layoutY="123.0" />
+      <TextField fx:id="endereco" layoutX="300.0" layoutY="166.0" />
+      <Label layoutX="232.0" layoutY="88.0" text="Nome:" />
+      <Label layoutX="240.0" layoutY="128.0" text="Cpf:" />
+      <Label layoutX="215.0" layoutY="167.0" text="Endereco:" />
+      <Button layoutX="211.0" layoutY="215.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="25.0" prefWidth="238.0" text="Cadastrar" />
+   </children>
+</Pane>
