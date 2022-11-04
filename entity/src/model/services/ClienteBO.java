@@ -4,13 +4,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import api.DTO.ClienteDTO;
 import model.DAO.BaseInterDAO;
 import model.DAO.ClienteDAO;
 import model.entities.Cliente;
 
 public class ClienteBO{
     BaseInterDAO<Cliente> DAO = new ClienteDAO();
-    public boolean adicionar(Cliente cliente){
+    public boolean adicionar(ClienteDTO dto){
+    	Cliente cliente = Cliente.converter(dto);
         ResultSet rs = DAO.findBySpecifiedField(cliente, "cpf"); //verifica se ja existe
         try {
             if(rs==null || !(rs.next()) ) {
@@ -24,12 +26,12 @@ public class ClienteBO{
             return false;
         }
     }
-    public List<Cliente> listar(){
-        List<Cliente> clientes = new ArrayList<Cliente>();
+    public List<ClienteDTO> listar(){
+        List<ClienteDTO> clientes = new ArrayList<ClienteDTO>();
         ResultSet rs = DAO.findAll();
         try{
             while(rs.next()) {
-                Cliente cliente = new Cliente(); 
+                ClienteDTO cliente = new ClienteDTO(); 
                 cliente.setCpf(rs.getString("cpf"));
                 cliente.setNome(rs.getString("nome"));
                 cliente.setEndereco(rs.getString("endereco"));

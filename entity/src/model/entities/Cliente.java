@@ -1,4 +1,5 @@
 package model.entities;
+import api.DTO.ClienteDTO;
 public class Cliente extends Pessoas{
     private String cpf;
    
@@ -41,4 +42,12 @@ public class Cliente extends Pessoas{
     public void Compra(Vendas venda){}
     public void Cadastrar(Responsavel resp){}
     public void Alterar(Responsavel resp){}
+
+    public static Cliente converter(ClienteDTO dto){
+        Cliente cliente = new Cliente();
+        cliente.setCpf(dto.getCpf());
+        cliente.setNome(dto.getNome());
+        cliente.setEndereco(dto.getEndereco());
+        return cliente;
+    }
 }
