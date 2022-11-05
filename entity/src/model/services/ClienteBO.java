@@ -71,17 +71,4 @@ public class ClienteBO{
             return false;
         }
     }
-
-//	public static void main(String args[]){
-//	    Cliente cliente = new Cliente();
-//	    cliente.setCpf("12311976366");
-//	    cliente.setNome("Fulano D'Tal");
-//	    cliente.setEndereco("Rua Delá Atras");
-//	    ClienteBO bo = new ClienteBO();
-//	    List<Cliente> lista = bo.listar();
-//	
-//	    for (Cliente a: lista) {
-//	        System.out.println(a.getNome());
-//	    }
-//  }
 }
