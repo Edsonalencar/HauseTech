@@ -13,7 +13,7 @@ public class EquipamentosBO{
     BaseInterDAO<Equipamentos> DAO = new EquipamentosDAO();
     public boolean adicionar(EquipamentosDTO dto){
     	Equipamentos eqp = Equipamentos.converter(dto);
-        ResultSet rs = DAO.findBySpecifiedField(eqp, "cpf"); //verifica se ja existe
+        ResultSet rs = DAO.findBySpecifiedField(eqp, "serialnumber"); //verifica se ja existe
         try {
             if(rs==null || !(rs.next()) ) {
                 if(DAO.inserir(eqp) == true)
@@ -62,7 +62,7 @@ public class EquipamentosBO{
         }
     }
     public boolean apagar(Equipamentos eqp) {
-        ResultSet rs = DAO.findBySpecifiedField(eqp, "cpf");
+        ResultSet rs = DAO.findBySpecifiedField(eqp, "serialnumber");
         try{
             if(rs!=null && rs.next() ) {
                 if(DAO.deletar(eqp) == true)
