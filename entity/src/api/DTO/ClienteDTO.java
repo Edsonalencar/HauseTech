@@ -41,8 +41,8 @@ public class ClienteDTO extends PessoasDTO{
         return this.cpf;
       }
 
-    public void Compra(Vendas venda){}
-    public void Cadastrar(Responsavel resp){}
-    public void Alterar(Responsavel resp){}
+//    public void Compra(Vendas venda){}
+//    public void Cadastrar(Responsavel resp){}
+//    public void Alterar(Responsavel resp){}
 
 }
