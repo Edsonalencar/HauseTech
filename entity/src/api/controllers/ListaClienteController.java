@@ -7,8 +7,10 @@ import java.util.ResourceBundle;
 
 import api.DTO.ClienteDTO;
 import model.services.ClienteBO;
+import view.Telas;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -16,9 +18,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ListaClienteController implements Initializable {
 	@FXML private TableView<ClienteDTO> tabelaCliente;
-	@FXML private TableColumn<ClienteDTO, String> columnNome;
-	@FXML private TableColumn<ClienteDTO, String> columnCpf;
-	@FXML private TableColumn<ClienteDTO, String> columnEndereco;
+	@FXML private TableColumn<ClienteDTO, String> columnNOME;
+	@FXML private TableColumn<ClienteDTO, String> columnCPF;
+	@FXML private TableColumn<ClienteDTO, String> columnENDERECO;
 	private ClienteBO bo = new ClienteBO();
     private ObservableList<ClienteDTO> listaDeClientes;
 	@Override
@@ -27,12 +29,21 @@ public class ListaClienteController implements Initializable {
 		listarClientes();
 	}
 	public void listarClientes() {
+		tabelaCliente.refresh();
 		List<ClienteDTO> clientes = bo.listar();
 		listaDeClientes = FXCollections.observableArrayList(clientes);
-		columnCpf.setCellValueFactory(new PropertyValueFactory<>("cpf"));
-		columnNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-		columnEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
+		columnCPF.setCellValueFactory(new PropertyValueFactory<>("cpf"));
+		columnNOME.setCellValueFactory(new PropertyValueFactory<>("nome"));
+		columnENDERECO.setCellValueFactory(new PropertyValueFactory<>("endereco"));
 		tabelaCliente.setItems(listaDeClientes);
-		
+	}
+	@FXML protected void btDashboardAction(ActionEvent e) {
+		Telas.changeScreen("dashboard");
+	}
+	@FXML protected void btCadastroSceneAction(ActionEvent e) {
+		Telas.changeScreen("cadastrocliente");
+	}
+	@FXML protected void btListaProdutosAction(ActionEvent e) {
+		Telas.changeScreen("listaprodutos");
 	}
 }
