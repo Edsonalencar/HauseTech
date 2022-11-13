@@ -13,7 +13,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="api.controllers.ListaClienteController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="api.controllers.MainController">
    <left>
       <Pane prefHeight="800.0" prefWidth="360.0" style="-fx-background-color: #004B7D;" BorderPane.alignment="CENTER">
          <children>
@@ -22,7 +22,7 @@
                   <Font size="28.0" />
                </font>
             </Text>
-            <Button alignment="TOP_LEFT" layoutX="84.0" layoutY="151.0" mnemonicParsing="false" onAction="#btDashboardAction" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="DASHBOARD" textFill="WHITE">
+            <Button alignment="TOP_LEFT" layoutX="84.0" layoutY="151.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="DASHBOARD" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -30,7 +30,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button alignment="TOP_LEFT" layoutX="84.0" layoutY="195.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="CLIENTES" textFill="WHITE">
+            <Button alignment="TOP_LEFT" layoutX="84.0" layoutY="195.0" mnemonicParsing="false" onAction="#btListaClientesAction" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="CLIENTES" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -76,26 +76,26 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="#004b7d" layoutX="44.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Todos os Clientes">
+            <Text fill="#004b7d" layoutX="44.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
                <font>
                   <Font size="28.0" />
                </font>
             </Text>
-            <Button layoutX="650.0" layoutY="25.0" mnemonicParsing="false" onAction="#btCadastroSceneAction" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="CADASTRO DE CLIENTES" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
+            <Button layoutX="723.0" layoutY="26.0" mnemonicParsing="false" style="-fx-background-color: #004B7D;" text="Gerar Relatório" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font size="18.0" />
                </font>
             </Button>
-            <TableView fx:id="tabelaCliente" layoutX="44.0" layoutY="101.0" prefHeight="682.0" prefWidth="856.0">
-              <columns>
-                <TableColumn fx:id="columnCPF" prefWidth="232.0" text="cpf" />
-                <TableColumn fx:id="columnNOME" prefWidth="280.0" text="nome" />
-                  <TableColumn fx:id="columnENDERECO" prefWidth="343.0" text="endereço" />
-              </columns>
-            </TableView>
+            <Arc fill="DODGERBLUE" layoutX="227.0" layoutY="632.0" length="270.0" radiusX="100.0" radiusY="100.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="382.0" layoutY="532.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <BarChart alternativeRowFillVisible="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" layoutX="44.0" layoutY="76.0" prefHeight="471.0" prefWidth="823.0" verticalGridLinesVisible="false">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
          </children>
       </Pane>
    </center>

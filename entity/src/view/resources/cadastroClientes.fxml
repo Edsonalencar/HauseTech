@@ -6,46 +6,54 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="api.controllers.CadastroClienteController">
    <top>
       <SplitPane prefHeight="93.0" prefWidth="1280.0" style="-fx-background-color: #004b7d;" BorderPane.alignment="CENTER">
          <items>
-            <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="HauseTech" textAlignment="CENTER" wrappingWidth="1272.66015625">
-               <font>
-                  <Font name="Constantia" size="45.0" />
-               </font>
-            </Text>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="525.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HauseTech" textAlignment="CENTER" wrappingWidth="228.66015625">
+                     <font>
+                        <Font name="Constantia" size="45.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
          </items>
       </SplitPane>
    </top>
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="#004b7d" fontSmoothingType="LCD" layoutX="522.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrar-se" textAlignment="CENTER">
+            <Text fill="#004b7d" fontSmoothingType="LCD" layoutX="408.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRE-SE, USUÁRIO" textAlignment="CENTER">
                <font>
                   <Font size="45.0" />
                </font>
             </Text>
-            <Label layoutX="573.0" layoutY="161.0" text="Nome" textFill="#afafaf">
+            <Label layoutX="566.0" layoutY="190.0" text="Nome" textFill="#afafaf">
                <font>	
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="nome" layoutX="573.0" layoutY="181.0" />
-            <TextField fx:id="cpf" layoutX="573.0" layoutY="246.0" />
-            <Label layoutX="573.0" layoutY="226.0" text="CPF" textFill="#afafaf">
+            <TextField fx:id="nome" layoutX="566.0" layoutY="210.0" />
+            <TextField fx:id="cpf" layoutX="566.0" layoutY="275.0" />
+            <Label layoutX="566.0" layoutY="255.0" text="CPF" textFill="#afafaf">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="endereco" layoutX="573.0" layoutY="312.0" />
-            <Label layoutX="573.0" layoutY="292.0" text="Endereço" textFill="#afafaf">
+            <TextField fx:id="endereco" layoutX="566.0" layoutY="341.0" />
+            <Label layoutX="566.0" layoutY="321.0" text="Endereço" textFill="#afafaf">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Button layoutX="567.0" layoutY="394.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="26.0" prefWidth="161.0" style="-fx-background-color: #0074C9;" text="CADASTRAR" textFill="WHITE">
+            <Button layoutX="567.0" layoutY="388.0" mnemonicParsing="false" onAction="#btCadastrarAction" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #0074C9;" text="CADASTRAR" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="567.0" layoutY="422.0" mnemonicParsing="false" onAction="#btCancelarAction" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #0074C9;" text="CANCELAR" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font>
