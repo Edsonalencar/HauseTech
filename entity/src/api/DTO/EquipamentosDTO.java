@@ -95,7 +95,7 @@ public class EquipamentosDTO{
 	}
 
 	public void Update(Equipamentos equi) {
-		// atualiza equipanentos
+		// atualiza 
 	}
 
     public void Compra(Vendas venda){}

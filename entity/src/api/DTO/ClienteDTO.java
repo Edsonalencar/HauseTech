@@ -1,6 +1,6 @@
 package api.DTO;
 
-import model.entities.*;
+//import model.entities.Cliente;
 
 public class ClienteDTO extends PessoasDTO{
     private String cpf;
