@@ -16,7 +16,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ListaClienteController implements Initializable {
+public class ListaClienteController extends MainController implements Initializable {
 	@FXML private TableView<ClienteDTO> tabelaCliente;
 	@FXML private TableColumn<ClienteDTO, String> columnNOME;
 	@FXML private TableColumn<ClienteDTO, String> columnCPF;

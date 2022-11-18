@@ -6,7 +6,7 @@ import model.services.EquipamentosBO;
 import api.DTO.EquipamentosDTO;
 import view.Telas;
 
-public class CadastroProdutoController{
+public class CadastroProdutoController extends MainController{
     
 	@FXML private TextField serialnumber;
     @FXML private TextField nome;

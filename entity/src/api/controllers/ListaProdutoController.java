@@ -16,7 +16,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ListaProdutoController implements Initializable {
+public class ListaProdutoController extends MainController implements Initializable {
 	@FXML private TableView<EquipamentosDTO> tabelaProduto;
 	@FXML private TableColumn<EquipamentosDTO, String> columnSERIALNUMBER;
 	@FXML private TableColumn<EquipamentosDTO, String> columnNOME;

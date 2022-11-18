@@ -13,7 +13,10 @@ public class MainController {
 	@FXML protected void btListaProdutosAction(ActionEvent e) {
 		Telas.changeScreen("listaprodutos");
 	}
-//	@FXML protected void btDashboardAction(ActionEvent e) {
-//		Telas.changeScreen("dashboard");
-//	}
+	@FXML protected void btGerarRelatorioAction(ActionEvent e) {
+		Telas.changeScreen("gerarrelatorio");
+	}
+	@FXML protected void btDashboardAction(ActionEvent e) {
+		Telas.changeScreen("dashboard");
+	}
 }

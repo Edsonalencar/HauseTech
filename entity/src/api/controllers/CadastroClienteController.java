@@ -1,4 +1,5 @@
 package api.controllers;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -6,7 +7,7 @@ import model.services.ClienteBO;
 import api.DTO.ClienteDTO;
 import view.Telas;
 
-public class CadastroClienteController{
+public class CadastroClienteController extends MainController{
     
 	@FXML private TextField cpf;
     @FXML private TextField nome;
