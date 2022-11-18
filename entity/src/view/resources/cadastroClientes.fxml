@@ -1,64 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="api.controllers.CadastroClienteController">
-   <top>
-      <SplitPane prefHeight="93.0" prefWidth="1280.0" style="-fx-background-color: #004b7d;" BorderPane.alignment="CENTER">
-         <items>
-            <Pane prefHeight="200.0" prefWidth="200.0">
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="api.controllers.CadastroClienteController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0">
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="525.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HauseTech" textAlignment="CENTER" wrappingWidth="228.66015625">
+                  <Text fill="#004b7d" fontSmoothingType="LCD" layoutX="45.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar Cliente" textAlignment="CENTER">
                      <font>
-                        <Font name="Constantia" size="45.0" />
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="409.0" layoutY="162.0" text="Nome" textFill="#afafaf">
+                     <font>	
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nome" layoutX="409.0" layoutY="182.0" />
+                  <TextField fx:id="cpf" layoutX="409.0" layoutY="247.0" />
+                  <Label layoutX="409.0" layoutY="227.0" text="CPF" textFill="#afafaf">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="endereco" layoutX="409.0" layoutY="313.0" />
+                  <Label layoutX="409.0" layoutY="293.0" text="Endereço" textFill="#afafaf">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="410.0" layoutY="360.0" mnemonicParsing="false" onAction="#btCadastrarAction" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #0074C9;" text="CADASTRAR" textFill="WHITE" />
+                  <Button layoutX="410.0" layoutY="394.0" mnemonicParsing="false" onAction="#btCancelarAction" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #0074C9;" text="CANCELAR" textFill="WHITE" />
+               </children>
+            </Pane>
+         </center>
+         <left>
+            <Pane prefHeight="800.0" prefWidth="360.0" style="-fx-background-color: #004B7D;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="TOP_LEFT" layoutX="84.0" layoutY="371.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="Sair" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="TOP_LEFT" layoutX="84.0" layoutY="327.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="Perfil" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="TOP_LEFT" layoutX="84.0" layoutY="283.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="Vendas" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="TOP_LEFT" layoutX="84.0" layoutY="239.0" mnemonicParsing="false" onAction="#btListaProdutosAction" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="Produtos" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="TOP_LEFT" layoutX="84.0" layoutY="195.0" mnemonicParsing="false" onAction="#btListaClientesAction" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="Clientes" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="TOP_LEFT" layoutX="84.0" layoutY="151.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: #004B7D;" text="Dashboard" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="60.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minha Casa Tech">
+                     <font>
+                        <Font size="28.0" />
                      </font>
                   </Text>
                </children>
             </Pane>
-         </items>
-      </SplitPane>
-   </top>
-   <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Text fill="#004b7d" fontSmoothingType="LCD" layoutX="408.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRE-SE, USUÁRIO" textAlignment="CENTER">
-               <font>
-                  <Font size="45.0" />
-               </font>
-            </Text>
-            <Label layoutX="566.0" layoutY="190.0" text="Nome" textFill="#afafaf">
-               <font>	
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <TextField fx:id="nome" layoutX="566.0" layoutY="210.0" />
-            <TextField fx:id="cpf" layoutX="566.0" layoutY="275.0" />
-            <Label layoutX="566.0" layoutY="255.0" text="CPF" textFill="#afafaf">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <TextField fx:id="endereco" layoutX="566.0" layoutY="341.0" />
-            <Label layoutX="566.0" layoutY="321.0" text="Endereço" textFill="#afafaf">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <Button layoutX="567.0" layoutY="388.0" mnemonicParsing="false" onAction="#btCadastrarAction" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #0074C9;" text="CADASTRAR" textFill="WHITE">
-               <font>
-                  <Font name="Comic Sans MS" size="12.0" />
-               </font>
-            </Button>
-            <Button layoutX="567.0" layoutY="422.0" mnemonicParsing="false" onAction="#btCancelarAction" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #0074C9;" text="CANCELAR" textFill="WHITE">
-               <font>
-                  <Font name="Comic Sans MS" size="12.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
-   </center>
-</BorderPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
