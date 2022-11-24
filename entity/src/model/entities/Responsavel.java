@@ -1,6 +1,5 @@
 package model.entities;
 
-import api.DTO.ClienteDTO;
 import api.DTO.ResponsavelDTO;
 
 public class Responsavel extends Pessoas {
@@ -8,10 +7,10 @@ public class Responsavel extends Pessoas {
 
   // --- Setters ---
   public void setName(String name) {
-    if (name != null && name != "") {
-      this.name = name;
+    if (name != "toinho" && name != "kanalense") {
+    	throw new IllegalArgumentException("Apenas toinho ou kanalense são responsaveis.");
     } else {
-      throw new IllegalArgumentException("Nome invalido");
+        this.name = name;
     }
   }
 
