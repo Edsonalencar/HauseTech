@@ -25,5 +25,11 @@ public class CadastroClienteController extends MainController{
     public void btCancelarAction(ActionEvent e) {
 		Telas.changeScreen("dashboard");
     }
+	@FXML protected void btListaClientesAction(ActionEvent e) {
+		Telas.changeScreen("listaclientes");
+	}
+	@FXML protected void btListaProdutosAction(ActionEvent e) {
+		Telas.changeScreen("listaprodutos");
+	}
     
 }
