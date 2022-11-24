@@ -2,7 +2,7 @@ package model.entities;
 
 import java.util.Date;
 
-class Vendas{
+public class Vendas{
 
 	private String cliente, responsavel, equipamento;
 	private int qtd;
