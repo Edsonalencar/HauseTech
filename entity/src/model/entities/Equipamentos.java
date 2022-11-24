@@ -1,5 +1,7 @@
 package model.entities;
+
 import api.DTO.EquipamentosDTO;
+
 public class Equipamentos {
 
 	private String nome, local, responsavel;
@@ -62,11 +64,11 @@ public class Equipamentos {
 	}
 
 	public void setResponsavel(String responsavel) {
-		if (responsavel != null && responsavel != " ") {
-			this.responsavel = responsavel;
-		} else {
-			throw new IllegalArgumentException("Responsavel invalido");
-		}
+		if (responsavel != "toinho" && responsavel != "kanalense") {
+	    	throw new IllegalArgumentException("Apenas toinho ou kanalense são responsaveis.");
+	    } else {
+	        this.responsavel = responsavel;
+	    }
 	}
 
 	public void setAtivo(boolean ativo) {
@@ -119,14 +121,15 @@ public class Equipamentos {
 	}
 	
 	public static Equipamentos converter(EquipamentosDTO dto){
-	    Equipamentos equipamento = new Equipamentos();
-	    equipamento.setSerialNumber(dto.getSerialNumber());
-	    equipamento.setNome(dto.getNome());
-	    equipamento.setPreco(dto.getPreco());
-	    equipamento.setLocal(dto.getLocal());
-	    equipamento.setResponsavel(dto.getResponsavel());
-	    equipamento.setQtd(dto.getQtd());
-	    equipamento.setAtivo(dto.getAtivo());
-	    return equipamento;
+        Equipamentos equipamento = new Equipamentos();
+        equipamento.setSerialNumber(dto.getSerialNumber());
+        equipamento.setNome(dto.getNome());
+        equipamento.setPreco(dto.getPreco());
+        equipamento.setLocal(dto.getLocal());
+        equipamento.setResponsavel(dto.getResponsavel());
+        equipamento.setQtd(dto.getQtd());
+        equipamento.setAtivo(dto.getAtivo());
+        return equipamento;
 	}
+
 }
