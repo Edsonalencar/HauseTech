@@ -1,5 +1,7 @@
 
-package entity;
+package model.entities;
+
+import api.DTO.LocaisDTO;
 
 public class Locais {
     private String localDeArmazenamento;
@@ -41,4 +43,11 @@ public class Locais {
             throw new IllegalArgumentException("compartimento é invalido");
         }
     }
+
+	public static Locais converter(LocaisDTO dto) {
+		Locais local = new Locais();
+        local.setLocalDeArmazenamento(dto.getLocalDeArmazenamento());
+        local.setCompartimento(dto.getCompartimento());
+        return local;
+	}
 }
