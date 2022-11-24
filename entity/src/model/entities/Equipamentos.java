@@ -64,11 +64,21 @@ public class Equipamentos {
 	}
 
 	public void setResponsavel(String responsavel) {
-		if (responsavel != "toinho" && responsavel != "kanalense") {
+//		if (responsavel != "toinho" || responsavel != "kanalense") {
+//	    	throw new IllegalArgumentException("Apenas toinho ou kanalense são responsaveis.");
+//	    } else {
+//	        this.responsavel = responsavel;
+//	    }
+		switch(responsavel){
+		case "kanalense":
+			this.responsavel = responsavel;
+			break;
+		case "toinho":
+			this.responsavel = responsavel;
+			break;
+		default:
 	    	throw new IllegalArgumentException("Apenas toinho ou kanalense são responsaveis.");
-	    } else {
-	        this.responsavel = responsavel;
-	    }
+		}
 	}
 
 	public void setAtivo(boolean ativo) {
