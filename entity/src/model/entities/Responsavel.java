@@ -1,4 +1,7 @@
-package entity;
+package model.entities;
+
+import api.DTO.ClienteDTO;
+import api.DTO.ResponsavelDTO;
 
 public class Responsavel extends Pessoas {
   private int tel;
@@ -83,5 +86,13 @@ public class Responsavel extends Pessoas {
 
   public void updateTel(int tel) {
     setTel(tel);
+  }
+  
+  public static Responsavel converter(ResponsavelDTO dto){
+      Responsavel rsp = new Responsavel();
+      rsp.setName(dto.getNome());
+      rsp.setAdress(dto.getAdress());
+      rsp.setTel(dto.getTel());
+      return rsp;
   }
 }
