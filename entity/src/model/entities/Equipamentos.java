@@ -1,5 +1,5 @@
-package entity;
-
+package model.entities;
+import api.DTO.EquipamentosDTO;
 public class Equipamentos {
 
 	private String nome, local, responsavel;
@@ -28,7 +28,7 @@ public class Equipamentos {
 		return ativo;
 	}
 
-	public double getpreco() {
+	public double getPreco() {
 		return preco;
 	}
 
