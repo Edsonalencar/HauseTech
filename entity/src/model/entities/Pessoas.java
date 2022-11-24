@@ -1,4 +1,4 @@
-package entity;
+package model.entities;
 
 class Pessoas {
   protected String name;
