@@ -119,13 +119,14 @@ public class Equipamentos {
 	}
 	
 	public static Equipamentos converter(EquipamentosDTO dto){
-        Equipamentos equipamento = new Equipamentos();
-        equipamento.setSerialNumber(dto.getSerialNumber());
-        equipamento.setNome(dto.getNome());
-        equipamento.setPreco(dto.getPreco());
-        equipamento.setLocal(dto.getLocal());
-        equipamento.setResponsavel(dto.getResponsavel());
-        equipamento.setQtd(dto.getQtd());
-        equipamento.setAtivo(dto.getAtivo());
-        return equipamento;
+	    Equipamentos equipamento = new Equipamentos();
+	    equipamento.setSerialNumber(dto.getSerialNumber());
+	    equipamento.setNome(dto.getNome());
+	    equipamento.setPreco(dto.getPreco());
+	    equipamento.setLocal(dto.getLocal());
+	    equipamento.setResponsavel(dto.getResponsavel());
+	    equipamento.setQtd(dto.getQtd());
+	    equipamento.setAtivo(dto.getAtivo());
+	    return equipamento;
+	}
 }
