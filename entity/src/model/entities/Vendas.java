@@ -5,7 +5,7 @@ import java.util.Date;
 public class Vendas{
 
 	private String cliente, responsavel, equipamento;
-	private int qtd;
+	private int qtd, id;
 	private Date dateTime;
 		
 
@@ -43,11 +43,11 @@ public class Vendas{
 
 	// --- Getters ---
 
-	private String getCliente(){
+	public String getCliente(){
 		return this.cliente;
 	}
 
-	private String getResponsavel(){
+	public String getResponsavel(){
 		return this.responsavel;
 	}
 
@@ -57,6 +57,10 @@ public class Vendas{
 
 	public int getQtd(){
 		return this.qtd;
+	}
+	
+	public int getId() {
+		return this.id;
 	}
 
 	private Date getDateTime() {
@@ -81,4 +85,6 @@ public class Vendas{
 	public void Cancelar(Vendas venda){
 		// Cancela uma venda
 	}
+
+	
 }
