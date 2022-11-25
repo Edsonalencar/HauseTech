@@ -22,6 +22,8 @@ public class CadastroProdutoController extends MainController{
 		dto.setPreco(Double.parseDouble(preco.getText()));
 		dto.setResponsavel(responsavel.getText());
 		bo.adicionar(dto);
+		Telas.changeScreen("listaprodutos");
+
     }
     public void btCancelarAction(ActionEvent e) {
 		Telas.changeScreen("dashboard");
