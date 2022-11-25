@@ -10,10 +10,13 @@ import model.services.EquipamentosBO;
 import view.Telas;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ListaProdutoController extends MainController implements Initializable {
@@ -25,7 +28,8 @@ public class ListaProdutoController extends MainController implements Initializa
 	@FXML private TableColumn<EquipamentosDTO, String> columnLOCAL;
 	@FXML private TableColumn<EquipamentosDTO, String> columnRESPONSAVEL;
 	@FXML private TableColumn<EquipamentosDTO, String> columnATIVO;
-
+	@FXML private TextField FilterField;
+	private final ObservableList<EquipamentosDTO> dataList = FXCollections.observableArrayList();
 
 	private EquipamentosBO bo = new EquipamentosBO();
     private ObservableList<EquipamentosDTO> listaDeEquipamentos;
@@ -33,6 +37,32 @@ public class ListaProdutoController extends MainController implements Initializa
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		listarEquipamentos();
+		
+		dataList.addAll(listaDeEquipamentos);
+		// Campo de Busca
+		FilteredList<EquipamentosDTO> filteredData = new FilteredList<>(dataList, b -> true);
+		FilterField.textProperty().addListener((observable, oldValue, newValue) -> {
+			filteredData.setPredicate(equipamentos -> {
+				if(newValue == null || newValue.isEmpty()) {
+					return true;
+				}
+				String lowerCaseFilter = newValue.toLowerCase();
+				if(equipamentos.getNome().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+					return true;
+				} else if (String.valueOf(equipamentos.getSerialNumber()).indexOf(lowerCaseFilter) != -1) {
+					return true;
+				} else if (equipamentos.getResponsavel().toLowerCase().indexOf(lowerCaseFilter) != 1) {
+					return true;
+				} else if (equipamentos.getLocal().toLowerCase().indexOf(lowerCaseFilter) != 1)
+					return true;
+					else
+						return false;
+			});
+		});
+		
+		SortedList<EquipamentosDTO> sortedData = new SortedList<>(filteredData);
+		sortedData.comparatorProperty().bind(tabelaProduto.comparatorProperty());
+		tabelaProduto.setItems(sortedData);
 	}
 	public void listarEquipamentos() {
 		List<EquipamentosDTO> eqps = bo.listar();
@@ -45,7 +75,7 @@ public class ListaProdutoController extends MainController implements Initializa
 		columnRESPONSAVEL.setCellValueFactory(new PropertyValueFactory<>("responsavel"));
 		columnATIVO.setCellValueFactory(new PropertyValueFactory<>("ativo"));
 
-		tabelaProduto.setItems(listaDeEquipamentos);
+//		tabelaProduto.setItems(listaDeEquipamentos);
 	}
 	@FXML protected void btDashboardAction(ActionEvent e) {
 		Telas.changeScreen("dashboard");
